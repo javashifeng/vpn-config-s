@@ -15,7 +15,7 @@
 在 v2rayN 中通过「从 URL 导入自定义路由规则」导入：
 
 ```
-https://raw.githubusercontent.com/DuskWander87/shadowrocket-config/main/v2rayn/routing.json
+https://raw.githubusercontent.com/javashifeng/vpn-config-s/main/v2rayn/routing.json
 ```
 
 ### 分流策略

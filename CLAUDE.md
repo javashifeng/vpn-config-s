@@ -15,6 +15,7 @@ Shadowrocket（iOS）代理分流配置。核心策略：国内域名/IP 直连�
 | `shadowrocket.conf` | Shadowrocket 主配置（DNS、Rule、URL Rewrite） | 手改 |
 | `rules/ChinaDirect.list` | 国内域名直连补充 | **手改（唯一数据源）** |
 | `rules/Reject.list` | 自定义广告/追踪拦截 | **手改（唯一数据源）** |
+| `rules/acl4ssr/` | ACL4SSR 上游规则快照（vendored，`shadowrocket.conf` 经本仓 raw URL 拉取） | 不手改，更新流程见目录内 README |
 | `v2rayn/` | v2rayN 端配置（已停止维护） | 不再维护，见 [docs/v2rayn.md](docs/v2rayn.md) |
 
 ## 核心约定

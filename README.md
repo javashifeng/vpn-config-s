@@ -9,13 +9,7 @@
 **raw.githubusercontent.com（权威源）：**
 
 ```
-https://raw.githubusercontent.com/DuskWander87/shadowrocket-config/main/shadowrocket.conf
-```
-
-**jsDelivr CDN（国内推荐，速度更快）：**
-
-```
-https://cdn.jsdelivr.net/gh/DuskWander87/shadowrocket-config@main/shadowrocket.conf
+https://raw.githubusercontent.com/javashifeng/vpn-config-s/main/shadowrocket.conf
 ```
 
 ## 使用方法
@@ -84,26 +78,14 @@ https://cdn.jsdelivr.net/gh/DuskWander87/shadowrocket-config@main/shadowrocket.c
 ```
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/
 ```
-→
-```
-https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/
-```
 
 **自建规则：**
 
 ```
-https://raw.githubusercontent.com/DuskWander87/shadowrocket-config/main/rules/
+https://raw.githubusercontent.com/javashifeng/vpn-config-s/main/rules/
 ```
 →
-```
-https://cdn.jsdelivr.net/gh/DuskWander87/shadowrocket-config@main/rules/
-```
 
-文件路径保持不变。
-
-## v2rayN（已停止维护）
-
-v2rayN 端已于 2026-09-27 停止维护，配置说明、维护流程与排查记录归档至 [docs/v2rayn.md](docs/v2rayn.md)。`v2rayn/` 目录与 `routing.json` 订阅链接继续可用，规则不再更新。
 
 # 许可证
 
