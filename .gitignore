@@ -12,5 +12,7 @@ desktop.ini
 
 .serena/
 .claude/settings.local.json
+# 订阅文件（含节点明文密码，绝不入库）
+332a7df9-adb5-4d5c-bf8d-4103ef5f15d5
 # Playwright MCP 本地数据
 .playwright-mcp/
