@@ -1,0 +1,43 @@
+# Persistent iCloud proxy rules for the active subscription
+
+prepend:
+- DOMAIN-SUFFIX,icloud.com,Proxy
+- DOMAIN-SUFFIX,icloud.com.cn,Proxy
+- DOMAIN-SUFFIX,icloud-content.com,Proxy
+- DOMAIN-SUFFIX,icloud-content.com.cn,Proxy
+- DOMAIN-SUFFIX,me.com,Proxy
+- DOMAIN-SUFFIX,mac.com,Proxy
+- DOMAIN-SUFFIX,apple-cloudkit.com,Proxy
+- DOMAIN-SUFFIX,apple-livephotoskit.com,Proxy
+- DOMAIN-SUFFIX,apzones.com,Proxy
+- DOMAIN-SUFFIX,apple-dns.net,Proxy
+- DOMAIN-KEYWORD,amazon,Proxy
+- DOMAIN-SUFFIX,amazon.cn,Proxy
+- DOMAIN-SUFFIX,amazonaws.cn,Proxy
+- DOMAIN-SUFFIX,amazonaws.com.cn,Proxy
+- DOMAIN-SUFFIX,paper-attachments.s3.amazonaws.com,Proxy
+- DOMAIN-SUFFIX,music.apple.com,Proxy
+- DOMAIN-SUFFIX,itunes.apple.com,Proxy
+- DOMAIN-SUFFIX,cdn-apple.com,Proxy
+- DOMAIN-SUFFIX,apple.com,Proxy
+- DOMAIN-SUFFIX,jianguoyun.com,Proxy
+append: []
+delete:
+- DOMAIN-SUFFIX,music.apple.com,DIRECT
+- DOMAIN-SUFFIX,itunes.apple.com,DIRECT
+- DOMAIN-SUFFIX,cdn-apple.com,DIRECT
+- DOMAIN-SUFFIX,apple.com,DIRECT
+- DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+- DOMAIN-SUFFIX,amazon.cn,DIRECT
+- DOMAIN-SUFFIX,amazonaws.cn,DIRECT
+- DOMAIN-SUFFIX,amazonaws.com.cn,DIRECT
+- DOMAIN-SUFFIX,paper-attachments.s3.amazonaws.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com,DIRECT
+- DOMAIN-SUFFIX,icloud.com.cn,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com,DIRECT
+- DOMAIN-SUFFIX,icloud-content.com.cn,DIRECT
+- DOMAIN-SUFFIX,me.com,DIRECT
+- DOMAIN-SUFFIX,mac.com,DIRECT
+- DOMAIN-SUFFIX,apple-livephotoskit.com,DIRECT
+- DOMAIN-SUFFIX,apzones.com,DIRECT
+- DOMAIN-SUFFIX,apple-dns.net,DIRECT

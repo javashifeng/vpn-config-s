@@ -16,3 +16,7 @@ desktop.ini
 332a7df9-adb5-4d5c-bf8d-4103ef5f15d5
 # Playwright MCP 本地数据
 .playwright-mcp/
+# Clash Verge 订阅原文与生成配置（含节点密码）
+clash-verge/profiles/RzkNiRuTkeYZ.yaml
+clash-verge/profiles/RL8ItchzNpKy.yaml
+clash-verge/clash-verge.yaml

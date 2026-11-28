@@ -1,0 +1,26 @@
+# OAuth：除代理节点启动引导外，所有业务域名统一由 Cloudflare DNS 解析。
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+
+  # 代理尚未建立时必须先解析节点域名；这是唯一的国内 DNS 引导例外。
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+  # 业务 DNS 请求全部经当前 Proxy 访问 Cloudflare，避免直连 1.1.1.1 被拦截。
+  nameserver:
+    - https://cloudflare-dns.com/dns-query#Proxy
+    - https://one.one.one.one/dns-query#Proxy
+  direct-nameserver:
+    - https://cloudflare-dns.com/dns-query#Proxy
+    - https://one.one.one.one/dns-query#Proxy
+  direct-nameserver-follow-policy: false
+
+  # 清除订阅自带的 fallback / 域名特例，确保国内外域名使用同一组 Cloudflare DNS。
+  fallback: []
+  nameserver-policy: {}

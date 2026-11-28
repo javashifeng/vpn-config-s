@@ -1,0 +1,60 @@
+# Clash Verge DNS Config
+
+dns:
+  enable: true
+  ipv6: false
+  listen: :53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-range6: fdfe:dcba:9876::1/64
+  fake-ip-filter-mode: blacklist
+  prefer-h3: false
+  respect-rules: false
+  use-hosts: false
+  use-system-hosts: false
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - '*.arpa'
+  - time.*.com
+  - ntp.*.com
+  - +.market.xiaomi.com
+  - localhost.ptlogin2.qq.com
+  - '*.msftncsi.com'
+  - www.msftconnecttest.com
+  - +.dtzhejiang.com
+  # 解析下面 DoH 服务器域名用的 DNS，只能写 IP
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  # 国内 DNS 优先：阿里、腾讯
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  - 223.5.5.5
+  - 119.29.29.29
+  # 国内 DNS 结果不可信时（返回非国内 IP 或命中 domain 名单）改用国外加密 DNS
+  fallback:
+  - https://dns.google/dns-query
+  - https://cloudflare-dns.com/dns-query
+  - tls://1.0.0.1:853
+  nameserver-policy: {}
+  proxy-server-nameserver: []
+  direct-nameserver: []
+  direct-nameserver-follow-policy: false
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+    - 127.0.0.1/32
+    domain:
+    - +.google.com
+    - +.facebook.com
+    - +.youtube.com
+    - +.gvt1.com
+    - +.googleapis.cn
+    - +.jianguoyun.com
+    - +.dav.jianguoyun.com
+hosts: {}

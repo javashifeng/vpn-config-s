@@ -1,0 +1,35 @@
+# Clash Verge 全局合并配置
+
+profile:
+  store-selected: true
+
+unified-delay: true
+
+# VirtualBuddy VM 的 NAT 子网（bridge100 / 192.168.64.1 网关）不走 TUN。
+tun:
+  route-exclude-address:
+    - 192.168.64.0/24
+
+# DNS 策略由各订阅自己的 Merge 配置维护：
+# Normal 使用国内主 DNS + 国外回退；OAuth 的业务域名全部使用 Cloudflare DoH。
+
+# Chrome 会优先使用 HTTP/3 (QUIC/UDP)。启用 QUIC SNI 嗅探，
+# 让经 Secure DNS 获得真实 IP 的 Claude 请求仍能命中域名规则。
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:
+    - "+.anthropic.com"
+    - "+.claude.ai"
+    - "+.claude.com"
+    - "+.claudeusercontent.com"

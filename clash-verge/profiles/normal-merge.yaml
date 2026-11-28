@@ -1,0 +1,36 @@
+# Normal：国内 DNS 结果优先；异常、境外和易污染域名采用国外加密 DNS。
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+
+  # 仅用于引导 DoH 域名和代理节点域名，避免启动时产生 DNS/代理循环。
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+  # 主解析：国内加密 DNS。
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+  # 回退解析经 Proxy 发出，避免国外 DNS 在直连链路上被阻断或污染。
+  fallback:
+    - https://cloudflare-dns.com/dns-query#Proxy
+    - https://dns.google/dns-query#Proxy
+
+  # 国内结果为境外 IP、保留/污染 IP，或域名属于 GFW 列表时，采用回退结果。
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+    ipcidr:
+      - 0.0.0.0/32
+      - 127.0.0.0/8
+      - 240.0.0.0/4
+
+  nameserver-policy: {}
