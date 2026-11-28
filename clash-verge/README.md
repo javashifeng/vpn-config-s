@@ -4,7 +4,7 @@ macOS 上 Clash Verge Rev 的自定义增强配置快照，源目录：
 `~/Library/Application Support/io.github.clash-verge-rev.clash-verge-rev/`
 
 > **不入库**：订阅文件（`profiles/<uid>.yaml`，含节点明文密码）、生成的 `clash-verge.yaml`、
-> 订阅 URL 中的 token（`profiles.yaml` 已脱敏为 `<REDACTED>`）。
+> `profiles.yaml`（含订阅 URL token）及 `dns_config.yaml` / `verge.yaml` 等应用自管文件。
 
 ## 文件对照
 
@@ -17,8 +17,5 @@ macOS 上 Clash Verge Rev 的自定义增强配置快照，源目录：
 | `profiles/normal-rules.yaml` | `profiles/rqoYDZuJhliJ.yaml` | Normal 订阅：iCloud/Apple/Amazon 走代理 |
 | `profiles/oauth-merge.yaml` | `profiles/m9X4t0DnOTl5.yaml` | OAuth 订阅 DNS（全部 Cloudflare DoH 经代理） |
 | `profiles/oauth-script.js` | `profiles/sqDOaQB0hqyg.js` | OAuth 订阅脚本（空实现） |
-| `profiles.yaml` | `profiles.yaml` | 订阅与增强文件绑定关系（URL 已脱敏） |
-| `dns_config.yaml` | `dns_config.yaml` | Verge 内置 DNS 设置 |
-| `verge.yaml` | `verge.yaml` | Verge 应用设置 |
 
-还原时按上表复制回源目录，并在 `profiles.yaml` 中填回真实订阅 URL。
+还原时按上表复制回源目录。
